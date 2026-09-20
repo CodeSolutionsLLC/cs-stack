@@ -9,11 +9,14 @@ upstream third-party plugin pack.
 
 ## Status
 
-Early seed with a **verification + shipping** playbook v0 subset.
+**v0 verification + shipping skills are shipped.** Packages on `main`:
+`setup-cs-stack`, `investigate`, `fix-bug`, `ship-change`, `verify`,
+`review-pr`, `careful-mode`. Index: [skills/README.md](skills/README.md).
 
-See [docs/PLAYBOOK-V0.md](docs/PLAYBOOK-V0.md) for what ships in v0 versus
-later work. Product playbooks and skills land here as first-party rewrites —
-no upstream source files are vendored.
+IDE plugin later. Broader playbooks later. See
+[docs/PLAYBOOK-V0.md](docs/PLAYBOOK-V0.md) for v0 versus later work.
+Product playbooks and skills land here as first-party rewrites — no
+upstream source files are vendored.
 
 ## Install
 
