@@ -15,6 +15,16 @@ See [docs/PLAYBOOK-V0.md](docs/PLAYBOOK-V0.md) for what ships in v0 versus
 later work. Product playbooks and skills land here as first-party rewrites —
 no upstream source files are vendored.
 
+## Install
+
+End-to-end buyer path: [docs/INSTALL.md](docs/INSTALL.md)
+(clone → setup-cs-stack → load skills → verify/review loop).
+
+First-run configure skill: [skills/setup-cs-stack/SKILL.md](skills/setup-cs-stack/SKILL.md).
+Idempotent. Grok-first. Optional models/roles fail open if absent.
+
+Bot authors (generic roles): [docs/FOR-BOT-AUTHORS.md](docs/FOR-BOT-AUTHORS.md).
+
 ## License
 
 Apache License 2.0 (Code Solutions canonical). See

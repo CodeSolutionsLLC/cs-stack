@@ -4,8 +4,8 @@ cs-stack v0 ships a **verification + shipping** subset only. Full coverage of
 a broader playbook catalog (often discussed as ~23 procedures) is explicitly
 out of scope for this release.
 
-All playbooks here are first-party rewrites. No upstream pstack (or other
-third-party) source files are vendored.
+All playbooks here are first-party rewrites. No third-party playbook or
+plugin source files are vendored.
 
 ## Scope table
 
