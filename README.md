@@ -28,6 +28,8 @@ Idempotent. Grok-first. Optional models/roles fail open if absent.
 
 Bot authors (generic roles): [docs/FOR-BOT-AUTHORS.md](docs/FOR-BOT-AUTHORS.md).
 
+Contributing: [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## License
 
 Apache License 2.0 (Code Solutions canonical). See

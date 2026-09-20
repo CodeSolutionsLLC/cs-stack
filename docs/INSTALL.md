@@ -33,6 +33,7 @@ v0 ships a verification + shipping subset. Load what you need:
 | Need                                  | Skill                                               |
 | ------------------------------------- | --------------------------------------------------- |
 | First install / re-wire               | [setup-cs-stack](../skills/setup-cs-stack/SKILL.md) |
+| Standing rigor / careful posture      | [careful-mode](../skills/careful-mode/SKILL.md)     |
 | Facts before changing code            | [investigate](../skills/investigate/SKILL.md)       |
 | Confirmed defect                      | [fix-bug](../skills/fix-bug/SKILL.md)               |
 | Intentional feature / behavior change | [ship-change](../skills/ship-change/SKILL.md)       |
@@ -54,7 +55,7 @@ Binding principles: [human-gate](../principles/human-gate.md),
 
 ## 5. Smoke check
 
-- Host skill library lists the packages you installed (at least `setup-cs-stack`).
+- Host skill library lists the packages you installed (at least `setup-cs-stack`; full v0 also includes `careful-mode`, `investigate`, `fix-bug`, `ship-change`, `verify`, `review-pr`).
 - Relative links from a skill into `playbooks/` and `principles/` resolve.
 - `setup-cs-stack` re-run reports skips, not destructive rewrites.
 
