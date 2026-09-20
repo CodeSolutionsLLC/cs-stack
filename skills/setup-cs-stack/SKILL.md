@@ -43,7 +43,7 @@ This skill does **not** write secrets, PATs, or credentials anywhere.
    - [playbooks/](../../playbooks/README.md)
    - Scope: [docs/PLAYBOOK-V0.md](../../docs/PLAYBOOK-V0.md)
 5. **Verify.**
-   - List `<host-skill-library>/*/SKILL.md` and confirm `setup-cs-stack` is present
+   - List `<host-skill-library>/*/SKILL.md` and confirm these v0 packages are present when installed from this checkout: `setup-cs-stack`, `careful-mode`, `investigate`, `fix-bug`, `ship-change`, `verify`, `review-pr`
    - Confirm the relative links above resolve from this file
    - Re-run this skill: second pass must report skips, not destructive changes
 
