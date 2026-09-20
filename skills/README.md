@@ -15,6 +15,7 @@ Load only the packages you need.
 | Skill | Package | Playbook |
 |-------|---------|----------|
 | setup-cs-stack | [setup-cs-stack/SKILL.md](setup-cs-stack/SKILL.md) | first-run configure |
+| careful-mode | [careful-mode/SKILL.md](careful-mode/SKILL.md) | standing rigor (v0 loop) |
 | investigate | [investigate/SKILL.md](investigate/SKILL.md) | [playbooks/investigate.md](../playbooks/investigate.md) |
 | fix-bug | [fix-bug/SKILL.md](fix-bug/SKILL.md) | [playbooks/fix-bug.md](../playbooks/fix-bug.md) |
 | ship-change | [ship-change/SKILL.md](ship-change/SKILL.md) | [playbooks/ship-change.md](../playbooks/ship-change.md) |
