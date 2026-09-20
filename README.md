@@ -15,6 +15,11 @@ See [docs/PLAYBOOK-V0.md](docs/PLAYBOOK-V0.md) for what ships in v0 versus
 later work. Product playbooks and skills land here as first-party rewrites —
 no upstream source files are vendored.
 
+## Install
+
+First-run configure: follow [skills/setup-cs-stack/SKILL.md](skills/setup-cs-stack/SKILL.md).
+Idempotent. Grok-first. Optional models/roles fail open if absent.
+
 ## License
 
 Apache License 2.0 (Code Solutions canonical). See
