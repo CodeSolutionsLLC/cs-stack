@@ -1,0 +1,13 @@
+cs-stack
+Copyright 2026 Code Solutions LLC
+
+Licensed under the Apache License, Version 2.0.
+
+--------------------------------------------------------------------
+Ideas-only attribution (no upstream code vendored)
+
+Some mechanisms in this project are inspired by ideas from the MIT-licensed
+cursor/plugins pstack project. No upstream source files were copied or
+vendored. This notice is attribution of ideas only and does not claim
+affiliation with, endorsement by, or redistribution of that project.
+--------------------------------------------------------------------
