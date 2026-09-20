@@ -7,6 +7,14 @@ out of scope for this release.
 All playbooks here are first-party rewrites. No third-party playbook or
 plugin source files are vendored.
 
+## v0 skills (shipped)
+
+Verification + shipping packages on `main`: `setup-cs-stack`,
+`investigate`, `fix-bug`, `ship-change`, `verify`, `review-pr`,
+`careful-mode`. Index: [skills/README.md](../skills/README.md).
+
+IDE plugin later.
+
 ## Scope table
 
 | Area | Decision | Notes |
@@ -16,6 +24,7 @@ plugin source files are vendored.
 | Ship change | **Ship in v0** | Feature/shipping path with human gate |
 | Verify | **Ship in v0** | Explicit verification checklist |
 | Review PR | **Ship in v0** | Reviewer checklist; no self-merge |
+| IDE plugin | **Later** | Not in v0 |
 | Broader planning / design playbooks | **Later** | After v0 proves the core loop |
 | Domain-specific ops playbooks | **Later** | Product- and infra-specific |
 | Full ~23 playbook catalog | **Later / drop many** | Prefer lean first-party set over parity |
