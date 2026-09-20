@@ -7,10 +7,11 @@ You may obtain a copy of the License at:
     https://legal.codesolutionsllc.com/apache-2.0/
 
 --------------------------------------------------------------------
-Ideas-only attribution (no upstream code vendored)
+Ideas-only attribution (no third-party code vendored)
 
-Some mechanisms in this project are inspired by ideas from the MIT-licensed
-cursor/plugins pstack project. No upstream source files were copied or
-vendored. This notice is attribution of ideas only and does not claim
-affiliation with, endorsement by, or redistribution of that project.
+Some mechanisms in this project are inspired by ideas from publicly
+available MIT-licensed agent tooling. No third-party source files were
+copied or vendored. This notice is attribution of ideas only and does
+not claim affiliation with, endorsement by, or redistribution of any
+third-party project.
 --------------------------------------------------------------------

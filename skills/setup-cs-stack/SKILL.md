@@ -2,7 +2,7 @@
 name: setup-cs-stack
 description: >-
   Use on first install of cs-stack or when wiring its playbooks and skills
-  into a Grok Bot (or later Cursor) skill library. Idempotent first-run configure.
+  into a Grok Bot (or other coding agent) skill library. Idempotent first-run configure.
 ---
 
 # setup-cs-stack
@@ -26,7 +26,7 @@ Only these destinations. Do not invent other paths.
 | Optional agent models config (host-defined) | Apply Grok-first defaults **only if** a documented models file already exists; otherwise skip |
 | Optional agent roles config (host-defined) | Apply light role wiring **only if** a documented roles file already exists; otherwise skip |
 
-`<host-skill-library>` is the skill directory the running agent already uses (for example a Grok Bot skill library root, or a later Cursor skills directory). Resolve it from the agent environment; do not hard-code machine-specific or private fleet paths in this repo.
+`<host-skill-library>` is the skill directory the running agent already uses (for example a Grok Bot skill library root, or another coding agent's skill directory). Resolve it from the agent environment; do not hard-code machine-specific or private host paths in this repo.
 
 This skill does **not** write secrets, PATs, or credentials anywhere.
 
@@ -49,8 +49,8 @@ This skill does **not** write secrets, PATs, or credentials anywhere.
 
 ## Do not
 
-- Vendor upstream pstack (or other third-party) source files ([no-vendor-upstream](../../principles/no-vendor-upstream.md))
+- Vendor third-party playbook or plugin source files ([no-vendor-upstream](../../principles/no-vendor-upstream.md))
 - Disable CI, self-merge, or bypass human gates ([no-self-merge](../../principles/no-self-merge.md), [human-gate](../../principles/human-gate.md))
-- Expand into Cursor Marketplace packaging (out of scope)
+- Expand into third-party marketplace packaging (out of scope)
 - Paste PATs or secrets into chat or into files this skill writes
-- Invent private fleet skill names or paths in public files
+- Invent private internal skill names or paths in public files
