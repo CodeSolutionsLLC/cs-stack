@@ -9,12 +9,17 @@ upstream third-party plugin pack.
 
 ## Status
 
-Early seed. Product playbooks and skills will land here as first-party
-rewrites — no upstream source files are vendored.
+Early seed with a **verification + shipping** playbook v0 subset.
+
+See [docs/PLAYBOOK-V0.md](docs/PLAYBOOK-V0.md) for what ships in v0 versus
+later work. Product playbooks and skills land here as first-party rewrites —
+no upstream source files are vendored.
 
 ## License
 
-Apache License 2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
+Apache License 2.0 (Code Solutions canonical). See
+[LICENSE](LICENSE), [NOTICE](NOTICE), and
+https://legal.codesolutionsllc.com/apache-2.0/.
 
 ## Security
 

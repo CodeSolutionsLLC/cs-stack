@@ -1,0 +1,76 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  markdown-structure:
+    name: Markdown structure
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Required paths exist
+        run: |
+          set -euo pipefail
+          required=(
+            README.md
+            LICENSE
+            NOTICE
+            SECURITY.md
+            docs/PLAYBOOK-V0.md
+            playbooks/README.md
+            principles/README.md
+            .github/CODEOWNERS
+            .github/dependabot.yml
+          )
+          for path in "${required[@]}"; do
+            test -e "$path" || { echo "missing: $path"; exit 1; }
+          done
+          echo "Required paths present."
+
+      - name: Markdown files are non-empty
+        run: |
+          set -euo pipefail
+          while IFS= read -r -d '' f; do
+            if [[ ! -s "$f" ]]; then
+              echo "empty markdown: $f"
+              exit 1
+            fi
+          done < <(find . -name '*.md' -not -path './.git/*' -print0)
+          echo "All markdown files non-empty."
+
+      - name: Relative markdown links resolve
+        run: |
+          set -euo pipefail
+          # Check [text](relative.md) and [text](path/to.md) style links
+          fail=0
+          while IFS= read -r -d '' f; do
+            dir=$(dirname "$f")
+            # Extract markdown links that are relative (not http/https/mailto/#)
+            while IFS= read -r link; do
+              [[ -z "$link" ]] && continue
+              case "$link" in
+                http://*|https://*|mailto:*|\#*) continue ;;
+              esac
+              # Strip fragment
+              target="${link%%\#*}"
+              [[ -z "$target" ]] && continue
+              if [[ ! -e "$dir/$target" && ! -e "./$target" ]]; then
+                echo "broken link in $f -> $link"
+                fail=1
+              fi
+            done < <(grep -oE '\[[^]]*\]\([^)]+\)' "$f" | sed -E 's/^\[[^]]*\]\(([^)]+)\)$/\1/' || true)
+          done < <(find . -name '*.md' -not -path './.git/*' -print0)
+          if [[ "$fail" -ne 0 ]]; then
+            exit 1
+          fi
+          echo "Relative markdown links OK."
