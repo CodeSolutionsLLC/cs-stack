@@ -26,6 +26,28 @@ fail-open (skipped if absent). It does not write secrets.
 
 Re-run after pulling updates; a second pass should skip unchanged packages.
 
+### Grok Bot importer
+
+Pitfalls for Boot and contest clones, and for any-user environments.
+Installing cs-stack is optional. **Skip is OK.**
+
+The clone may need GitHub auth. Paste or copy skills into **this bot’s**
+skill library only.
+
+On Windows, use Git Bash, or another shell where `git` is on `PATH`.
+[setup-cs-stack](../skills/setup-cs-stack/SKILL.md) copies each package to
+`<host-skill-library>/<name>/SKILL.md`. **`<host-skill-library>`** is the
+skill directory this bot already uses. Resolve it from the agent. Do not
+hard-code a machine home directory.
+
+An empty board (no coding workers) is fine. cs-stack is still useful for
+verify and review when a human opens pull requests. The coding front door
+can stay quiet.
+
+Your coding front-door bot may offer a skippable Install once after GitHub
+is connected. You can skip that offer. This guide does not require a
+marketplace package.
+
 ## 3. Which skills to load
 
 v0 ships a verification + shipping subset. Load what you need:
