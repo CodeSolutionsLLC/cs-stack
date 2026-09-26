@@ -67,5 +67,5 @@ Binding principles: [human-gate](../principles/human-gate.md),
 
 ## Related
 
-- Bot authors (generic roles): [FOR-BOT-AUTHORS.md](FOR-BOT-AUTHORS.md)
+- Bot authors (generic roles + front-door FTUE): [FOR-BOT-AUTHORS.md](FOR-BOT-AUTHORS.md)
 - Security reports: [SECURITY.md](../SECURITY.md)
