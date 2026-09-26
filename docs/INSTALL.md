@@ -28,7 +28,7 @@ Re-run after pulling updates; a second pass should skip unchanged packages.
 
 ### Grok Bot importer
 
-Pitfalls for Boot and contest clones, and for any-user environments.
+Pitfalls for fresh clones and any-user environments.
 Installing cs-stack is optional. **Skip is OK.**
 
 The clone may need GitHub auth. Paste or copy skills into **this bot’s**

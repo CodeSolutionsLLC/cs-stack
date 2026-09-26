@@ -20,7 +20,7 @@ be the sole approver of its own PR ([no-self-merge](../principles/no-self-merge.
 
 Public front-door / dispatcher templates must treat **cs-stack Install as
 skippable**. After GitHub (or equivalent) is connected, offer Install once;
-the operator may skip. Soft-skip is not the same as “install OK.”
+the operator may skip. Skipping Install is not the same as install OK.
 
 **Do not** block the front door’s “ready” state on:
 
@@ -38,10 +38,9 @@ future playbook catalog before they can declare ready.
 
 Buyer path details: [INSTALL.md](INSTALL.md).
 
-**FOLLOW-UP (#22):** when `docs/INSTALL.md` gains the **Grok Bot importer**
-subsection (Windows / skill-library destination / Skip is OK), link that
-heading from this section. Until then, INSTALL remains the canonical install
-path; do not hard-require it for ready.
+Grok Bot importer details (Windows, skill-library destination, Skip is OK):
+[INSTALL.md § Grok Bot importer](INSTALL.md#grok-bot-importer). INSTALL is
+the canonical install path; do not hard-require it for ready.
 
 ## Wiring
 
