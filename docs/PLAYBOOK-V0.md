@@ -7,6 +7,12 @@ out of scope for this release.
 All playbooks here are first-party rewrites. No third-party playbook or
 plugin source files are vendored.
 
+## v0 skills (shipped)
+
+Verification + shipping packages on `main`: `setup-cs-stack`,
+`investigate`, `fix-bug`, `ship-change`, `verify`, `review-pr`,
+`careful-mode`. Index: [skills/README.md](../skills/README.md).
+
 ## Scope table
 
 | Area | Decision | Notes |

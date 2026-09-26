@@ -2,12 +2,12 @@
 name: setup-cs-stack
 description: >-
   Use on first install of cs-stack or when wiring its playbooks and skills
-  into a Grok Bot (or other coding agent) skill library. Idempotent first-run configure.
+  into a Grok Bot skill library. Idempotent first-run configure.
 ---
 
 # setup-cs-stack
 
-Idempotent first-run configure for this repository. Prefer Grok / Grok Bot paths.
+Idempotent first-run configure for this repository. Install and paths are for Grok Bot only.
 Optional model and role config must not hard-fail if absent.
 
 ## When to use
@@ -23,10 +23,10 @@ Only these destinations. Do not invent other paths.
 | Path | Action |
 |------|--------|
 | `<host-skill-library>/<skill-name>/SKILL.md` | Copy or update each package under `skills/*/SKILL.md` from this checkout into the host skill library the agent already uses |
-| Optional agent models config (host-defined) | Apply Grok-first defaults **only if** a documented models file already exists; otherwise skip |
+| Optional agent models config (host-defined) | Apply Grok Bot defaults **only if** a documented models file already exists; otherwise skip |
 | Optional agent roles config (host-defined) | Apply light role wiring **only if** a documented roles file already exists; otherwise skip |
 
-`<host-skill-library>` is the skill directory the running agent already uses (for example a Grok Bot skill library root, or another coding agent's skill directory). Resolve it from the agent environment; do not hard-code machine-specific or private host paths in this repo.
+`<host-skill-library>` is the skill directory the running Grok Bot already uses (for example a Grok Bot skill library root). Resolve it from the agent environment; do not hard-code machine-specific or private host paths in this repo.
 
 This skill does **not** write secrets, PATs, or credentials anywhere.
 
@@ -37,13 +37,13 @@ This skill does **not** write secrets, PATs, or credentials anywhere.
    - Destination: `<host-skill-library>/<name>/SKILL.md`
    - If destination exists and content matches source, skip
    - If missing or different, copy/update the file only (no wipe of sibling skills)
-3. **Optional models / roles (fail-open).** Prefer Grok / Grok Bot defaults when applying config. If the host has no models or roles file, continue and note the skip. Never create secret-bearing files.
+3. **Optional models / roles (fail-open).** Apply Grok Bot defaults when applying config. If the host has no models or roles file, continue and note the skip. Never create secret-bearing files.
 4. **Point at principles and playbooks.** Tell the agent to read (do not duplicate wholesale):
    - [principles/](../../principles/README.md)
    - [playbooks/](../../playbooks/README.md)
    - Scope: [docs/PLAYBOOK-V0.md](../../docs/PLAYBOOK-V0.md)
 5. **Verify.**
-   - List `<host-skill-library>/*/SKILL.md` and confirm `setup-cs-stack` is present
+   - List `<host-skill-library>/*/SKILL.md` and confirm these v0 packages are present when installed from this checkout: `setup-cs-stack`, `careful-mode`, `investigate`, `fix-bug`, `ship-change`, `verify`, `review-pr`
    - Confirm the relative links above resolve from this file
    - Re-run this skill: second pass must report skips, not destructive changes
 
