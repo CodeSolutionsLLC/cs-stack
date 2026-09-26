@@ -4,7 +4,7 @@ Public buyer / importer path: clone this repository, run first-run configure,
 load the skills you need, then use the verify → review loop before anything
 lands on `main`.
 
-This guide is for **Grok Bot** (and other agent skill libraries). It does not
+This guide is for **Grok Bot skill libraries**. It does not
 require a marketplace package.
 
 ## 1. Clone
@@ -89,5 +89,5 @@ Binding principles: [human-gate](../principles/human-gate.md),
 
 ## Related
 
-- Bot authors (generic roles + front-door FTUE): [FOR-BOT-AUTHORS.md](FOR-BOT-AUTHORS.md)
+- Grok Bot authors (generic roles + front-door FTUE): [FOR-BOT-AUTHORS.md](FOR-BOT-AUTHORS.md)
 - Security reports: [SECURITY.md](../SECURITY.md)

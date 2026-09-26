@@ -1,6 +1,6 @@
-# For bot authors
+# For Grok Bot authors
 
-Short notes for people who design or configure coding agents that consume
+Short notes for people who design or configure Grok Bots that consume
 cs-stack. Uses **generic roles only** — not any one organization’s internal
 roster names.
 
