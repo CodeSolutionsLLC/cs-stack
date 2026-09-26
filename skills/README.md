@@ -7,7 +7,7 @@ playbooks — they do not vendor upstream packs.
 ## Install
 
 Use [`setup-cs-stack`](setup-cs-stack/SKILL.md) for first-run configure, or clone
-this repository and copy/symlink `skills/<name>/` into the agent’s skill library.
+this repository and copy/symlink `skills/<name>/` into this Grok Bot’s skill library.
 Load only the packages you need.
 
 ## v0 index
