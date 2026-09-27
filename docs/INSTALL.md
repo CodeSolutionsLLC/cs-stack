@@ -53,11 +53,13 @@ marketplace package.
 Named profiles so you need not load the full set. Still for **Grok Bot**
 skill libraries only. Still no marketplace package.
 
+Every profile also copies [setup-cs-stack](../skills/setup-cs-stack/SKILL.md) so the operator can re-run profile selection.
+
 | Profile | Skills | Typical use |
 | --- | --- | --- |
 | full | [setup-cs-stack](../skills/setup-cs-stack/SKILL.md) + [careful-mode](../skills/careful-mode/SKILL.md) + [investigate](../skills/investigate/SKILL.md) + [fix-bug](../skills/fix-bug/SKILL.md) + [ship-change](../skills/ship-change/SKILL.md) + [verify](../skills/verify/SKILL.md) + [review-pr](../skills/review-pr/SKILL.md) | coding front door |
-| leaf | [investigate](../skills/investigate/SKILL.md) + [fix-bug](../skills/fix-bug/SKILL.md) + [verify](../skills/verify/SKILL.md) (+ [careful-mode](../skills/careful-mode/SKILL.md) optional) | single-leaf implementers |
-| careful-only | [careful-mode](../skills/careful-mode/SKILL.md) (+ [verify](../skills/verify/SKILL.md) optional) | high-stakes one-offs |
+| leaf | [setup-cs-stack](../skills/setup-cs-stack/SKILL.md) + [investigate](../skills/investigate/SKILL.md) + [fix-bug](../skills/fix-bug/SKILL.md) + [verify](../skills/verify/SKILL.md) (+ [careful-mode](../skills/careful-mode/SKILL.md) optional) | single-leaf implementers |
+| careful-only | [setup-cs-stack](../skills/setup-cs-stack/SKILL.md) + [careful-mode](../skills/careful-mode/SKILL.md) (+ [verify](../skills/verify/SKILL.md) optional) | high-stakes one-offs |
 
 ## 4. Which skills to load
 
