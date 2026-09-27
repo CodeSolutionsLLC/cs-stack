@@ -9,6 +9,7 @@ Thanks for helping improve **cs-stack**. Contributions are under the
 2. Know what is in v0: [docs/PLAYBOOK-V0.md](docs/PLAYBOOK-V0.md).
 3. Report security issues privately — [SECURITY.md](SECURITY.md). Do **not**
    open a public issue or PR with exploit details or secrets.
+4. Follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## How we land changes
 
