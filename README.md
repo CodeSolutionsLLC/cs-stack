@@ -29,6 +29,7 @@ Idempotent. Grok Bot only. Optional models/roles fail open if absent.
 Grok Bot authors (generic roles): [docs/FOR-BOT-AUTHORS.md](docs/FOR-BOT-AUTHORS.md).
 
 Contributing: [CONTRIBUTING.md](CONTRIBUTING.md).
+Code of Conduct: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 
 ## License
 
