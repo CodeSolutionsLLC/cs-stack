@@ -22,6 +22,7 @@ upstream source files are vendored.
 
 End-to-end buyer path: [docs/INSTALL.md](docs/INSTALL.md)
 (clone → setup-cs-stack → load skills → verify/review loop).
+Named install profiles (full, leaf, careful-only): [Install profiles](docs/INSTALL.md#install-profiles).
 
 First-run configure skill: [skills/setup-cs-stack/SKILL.md](skills/setup-cs-stack/SKILL.md).
 Idempotent. Grok Bot only. Optional models/roles fail open if absent.
