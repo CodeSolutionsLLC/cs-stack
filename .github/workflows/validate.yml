@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [main]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
@@ -74,3 +78,35 @@ jobs:
             exit 1
           fi
           echo "Relative markdown links OK."
+
+  workflow-lint:
+    name: Workflow lint
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Install actionlint
+        env:
+          # rhysd/actionlint v1.7.12 linux/amd64 release tarball.
+          # SHA256 is the linux_amd64 line in actionlint_1.7.12_checksums.txt
+          # (same digest as the GitHub release asset).
+          ACTIONLINT_VERSION: "1.7.12"
+          ACTIONLINT_SHA256: "8aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8"
+        run: |
+          set -euo pipefail
+          version="${ACTIONLINT_VERSION}"
+          expected="${ACTIONLINT_SHA256}"
+          tarball="actionlint_${version}_linux_amd64.tar.gz"
+          checksums="actionlint_${version}_checksums.txt"
+          base="https://github.com/rhysd/actionlint/releases/download/v${version}"
+          curl -fsSL -o "${tarball}" "${base}/${tarball}"
+          curl -fsSL -o "${checksums}" "${base}/${checksums}"
+          grep -qxF "${expected}  ${tarball}" "${checksums}"
+          echo "${expected}  ${tarball}" | sha256sum -c -
+          tar -xzf "${tarball}" actionlint
+          ./actionlint -version
+
+      - name: Lint workflows
+        run: ./actionlint -color .github/workflows/*.yml
