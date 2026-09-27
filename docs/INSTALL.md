@@ -48,7 +48,18 @@ Your coding front-door bot may offer a skippable Install once after GitHub
 is connected. You can skip that offer. This guide does not require a
 marketplace package.
 
-## 3. Which skills to load
+## 3. Install profiles
+
+Named profiles so you need not load the full set. Still for **Grok Bot**
+skill libraries only. Still no marketplace package.
+
+| Profile | Skills | Typical use |
+| --- | --- | --- |
+| full | [setup-cs-stack](../skills/setup-cs-stack/SKILL.md) + [careful-mode](../skills/careful-mode/SKILL.md) + [investigate](../skills/investigate/SKILL.md) + [fix-bug](../skills/fix-bug/SKILL.md) + [ship-change](../skills/ship-change/SKILL.md) + [verify](../skills/verify/SKILL.md) + [review-pr](../skills/review-pr/SKILL.md) | coding front door |
+| leaf | [investigate](../skills/investigate/SKILL.md) + [fix-bug](../skills/fix-bug/SKILL.md) + [verify](../skills/verify/SKILL.md) (+ [careful-mode](../skills/careful-mode/SKILL.md) optional) | single-leaf implementers |
+| careful-only | [careful-mode](../skills/careful-mode/SKILL.md) (+ [verify](../skills/verify/SKILL.md) optional) | high-stakes one-offs |
+
+## 4. Which skills to load
 
 v0 ships a verification + shipping subset. Load what you need:
 
@@ -64,7 +75,7 @@ v0 ships a verification + shipping subset. Load what you need:
 
 Index: [skills/README.md](../skills/README.md). Scope: [PLAYBOOK-V0.md](PLAYBOOK-V0.md).
 
-## 4. Verify / review loop (before merge)
+## 5. Verify / review loop (before merge)
 
 1. Agent implements behind a PR (never force-push to `main`).
 2. Run **verify** on the change — attach evidence to the PR.
@@ -75,7 +86,7 @@ Binding principles: [human-gate](../principles/human-gate.md),
 [no-self-merge](../principles/no-self-merge.md),
 [verify](../principles/verify.md).
 
-## 5. Smoke check
+## 6. Smoke check
 
 - Host skill library lists the packages you installed (at least `setup-cs-stack`; full v0 also includes `careful-mode`, `investigate`, `fix-bug`, `ship-change`, `verify`, `review-pr`).
 - Relative links from a skill into `playbooks/` and `principles/` resolve.

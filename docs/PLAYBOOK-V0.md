@@ -12,6 +12,7 @@ plugin source files are vendored.
 Verification + shipping packages on `main`: `setup-cs-stack`,
 `investigate`, `fix-bug`, `ship-change`, `verify`, `review-pr`,
 `careful-mode`. Index: [skills/README.md](../skills/README.md).
+Named install profiles (full, leaf, careful-only): [Install profiles](INSTALL.md#install-profiles).
 
 ## Scope table
 
