@@ -1,0 +1,53 @@
+name: Bug report
+description: Something in cs-stack is not working as documented.
+title: "Bug: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. See [CONTRIBUTING.md](https://github.com/CodeSolutionsLLC/cs-stack/blob/main/CONTRIBUTING.md).
+
+        **Do not include secrets, PATs, private config, or exploit writeups.**
+        Report vulnerabilities privately — do not open a public issue.
+        Email **security@codesolutionsllc.com**. See [SECURITY.md](https://github.com/CodeSolutionsLLC/cs-stack/blob/main/SECURITY.md).
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What went wrong, and what did you observe?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected
+      description: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps a maintainer can follow.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Optional. OS, skill or playbook path, and anything else that helps reproduce the bug.
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Logs, screenshots, or links. Redact secrets, tokens, and private config.
+    validations:
+      required: false

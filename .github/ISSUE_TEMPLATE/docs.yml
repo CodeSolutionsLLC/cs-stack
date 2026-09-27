@@ -1,0 +1,36 @@
+name: Documentation
+description: A docs page, skill, or playbook is wrong or missing.
+title: "Docs: "
+labels:
+  - documentation
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Report a problem in public docs, skills, or playbooks. See [CONTRIBUTING.md](https://github.com/CodeSolutionsLLC/cs-stack/blob/main/CONTRIBUTING.md).
+
+        **Do not include secrets, PATs, private config, or exploit writeups.**
+        Report vulnerabilities privately — do not open a public issue.
+        Email **security@codesolutionsllc.com**. See [SECURITY.md](https://github.com/CodeSolutionsLLC/cs-stack/blob/main/SECURITY.md).
+  - type: input
+    id: page
+    attributes:
+      label: Docs page, skill, or playbook
+      description: Path or link, for example `docs/INSTALL.md` or `skills/verify`.
+      placeholder: docs/INSTALL.md
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's wrong or missing
+      description: What should a reader be able to do, and where does the page fall short?
+    validations:
+      required: true
+  - type: textarea
+    id: suggested-fix
+    attributes:
+      label: Suggested fix
+      description: Optional. What should the docs say or link to instead?
+    validations:
+      required: false
