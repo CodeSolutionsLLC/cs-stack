@@ -7,6 +7,13 @@ rewritten playbooks, procedures, and skills meant to be installed into a
 Grok Bot skill library. It is **not** affiliated with, endorsed by, or a
 redistribution of any upstream third-party plugin pack.
 
+## Inspiration
+
+cs-stack was inspired by [pstack](https://github.com/cursor/plugins/tree/main/pstack)
+from Cursor. pstack is a public pack of coding playbooks and skills. It gave
+us the idea for a ready set of careful steps a coding assistant can follow.
+The playbooks and skills in this repository were written by Code Solutions LLC.
+
 ## Status
 
 **v0 verification + shipping skills are shipped.** Packages on `main`:
